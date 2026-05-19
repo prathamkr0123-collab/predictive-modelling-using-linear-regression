@@ -1,94 +1,35 @@
-Predictive Modeling Using Linear Regression
 
-Build a machine learning model to predict California housing prices using Linear Regression.
 
-What This Project Does
-Loads the California Housing dataset
-Trains a Linear Regression model
-Predicts housing prices
-Evaluates model performance using:
-Mean Squared Error (MSE)
-R² Score
-Visualizes prediction performance using scatter plots
-Project Structure
-linear-regression-project/
-│
-├── linear_regression.py        # Main Python code
-├── regression_performance.png  # Output visualization
-├── requirements.txt            # Required libraries
-├── .gitignore                  # Ignored files
-└── README.md                   # Project documentation
-How to Run
-1. Clone the Repository
-git clone https://github.com/your-username/linear-regression-project.git
+## 📌 Project Overview
 
-cd linear-regression-project
-2. Install Dependencies
-pip install -r requirements.txt
+This repository provides a production-ready, modular architecture designed to solve core supervised learning challenges. It features dual implementations tailored for different structural problem types:
 
-Or manually install:
+1. **Classification Pipeline:** Built using **Random Forest Ensemble** methods to isolate and assign discrete categories or labels.
+2. **Regression Pipeline:** Built using **Ordinary Least Squares (OLS) Linear Regression** to forecast mathematical continuums and numeric trends.
 
-pip install numpy pandas matplotlib seaborn scikit-learn
-3. Run the Project
-python linear_regression.py
+[ Structured Data Ingestion ] ──> [ Train-Test Split (80/20) ] ──> [ Model Fitting & Optimization ] ──> [ Metric Evaluation & Export ]
 
-Or run it in Jupyter Notebook.
+directory layout
+├── data/                      # Local data storage directories
+│   └── sample_dataset.csv
+├── exports/                   # Automatically generated evaluation plots
+│   ├── confusion_matrix.png
+│   └── regression_performance.png
+├── src/                       # Complete operational source scripts
+│   ├── classification_model.py
+│   └── regression_model.py
+└── README.md                  # System documentation
 
-Technologies Used
-Python
-NumPy
-Pandas
-Matplotlib
-Seaborn
-Scikit-learn
-Dataset Information
+🏃 Running the Models
+To execute the core predictive models and view real-time validation analytics, use the standard Python terminal execution paths:
+For Classification (Random Forest):python src/classification_model.py
+for regression(linear regression): python src/regression_model.py
 
-Dataset used:
-
-California Housing Dataset from Scikit-learn
-Features Used
-MedInc → Median Income
-HouseAge → House Age
-AveRooms → Average Rooms
-Target
-MedHouseVal → Median House Value
-Model Performance
-
-Example output:
-
-Training Linear Regression Model...
-
-Mean Squared Error (MSE): 0.6589
-R-squared Score (Accuracy Metric): 49.72%
-
-Visualization saved as 'regression_performance.png'
-Output Visualization
-
-The model generates a graph comparing:
-
-Actual Values
-Predicted Values
-Perfect Prediction Line
-
-Saved as:
-
-regression_performance.png
-Future Improvements
-Use all available dataset features
-Apply feature scaling
-Try advanced regression models:
-Random Forest Regressor
-XGBoost
-Decision Tree Regressor
-Learning Outcomes
-
-This project helps understand:
-
-Machine Learning basics
-Regression algorithms
-Data preprocessing
-Model evaluation
-Data visualization
-Author
-
-Pratham Kumar
+📈 Metric Interpretations
+📊 Note on Validation: The pipeline isolates 20% of the dataset as an untouched testing split to evaluate true model generalization on unseen data.
+Classification Metrics
+Accuracy Score: Calculates the net percentage of correctly matched classes over total records evaluated.
+Confusion Matrix: Provides a coordinate layout mapping true classes against predicted classes to identify precise edge cases where the model flags false positives or negatives.
+Regression Metrics
+Mean Squared Error (MSE): Measures the average squared variance between estimates and ground truths. Values dropping near 0 represent narrow fitting errors.
+R^2 Score (Coefficient of Determination): Explains what percentage of the data's variance is successfully driven by your chosen input features.
