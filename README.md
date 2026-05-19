@@ -1,24 +1,39 @@
-Project Overview
+Predictive Modeling Using Linear Regression
 
-This project uses the California Housing dataset provided by Scikit-learn to build a predictive model for housing prices.
+Build a machine learning model to predict California housing prices using Linear Regression.
 
-The workflow includes:
-
-Loading and preparing the dataset
-Selecting important features
-Splitting data into training and testing sets
-Training a Linear Regression model
-Predicting housing prices
-Evaluating model performance
-Visualizing actual vs predicted values
-Features
-Simple and beginner-friendly ML project
-Uses real-world housing dataset
-Implements Linear Regression
-Calculates evaluation metrics:
+What This Project Does
+Loads the California Housing dataset
+Trains a Linear Regression model
+Predicts housing prices
+Evaluates model performance using:
 Mean Squared Error (MSE)
 R² Score
-Generates performance visualization graph
+Visualizes prediction performance using scatter plots
+Project Structure
+linear-regression-project/
+│
+├── linear_regression.py        # Main Python code
+├── regression_performance.png  # Output visualization
+├── requirements.txt            # Required libraries
+├── .gitignore                  # Ignored files
+└── README.md                   # Project documentation
+How to Run
+1. Clone the Repository
+git clone https://github.com/your-username/linear-regression-project.git
+
+cd linear-regression-project
+2. Install Dependencies
+pip install -r requirements.txt
+
+Or manually install:
+
+pip install numpy pandas matplotlib seaborn scikit-learn
+3. Run the Project
+python linear_regression.py
+
+Or run it in Jupyter Notebook.
+
 Technologies Used
 Python
 NumPy
@@ -28,57 +43,16 @@ Seaborn
 Scikit-learn
 Dataset Information
 
-Dataset Used:
+Dataset used:
 
-California Housing Dataset
+California Housing Dataset from Scikit-learn
 Features Used
-Feature	Description
-MedInc	Median Income
-HouseAge	House Age
-AveRooms	Average Number of Rooms
-Target Variable
-Target	Description
-MedHouseVal	Median House Value
-Project Structure
-linear-regression-project/
-│
-├── linear_regression.py         # Main project file
-├── regression_performance.png   # Output visualization
-├── requirements.txt             # Required libraries
-├── .gitignore                   # Ignored files for Git
-└── README.md                    # Project documentation
-Installation
-
-Install the required Python libraries:
-
-pip install numpy pandas matplotlib seaborn scikit-learn
-
-Or install using requirements.txt:
-
-pip install -r requirements.txt
-How to Run the Project
-
-Run the Python file:
-
-python linear_regression.py
-
-Or execute the notebook in Jupyter Lab/Notebook.
-
-Model Training
-
-The project trains a Linear Regression model using:
-
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-The model learns the relationship between housing features and house prices.
-
-Model Evaluation
-
-The project evaluates model performance using:
-
-Mean Squared Error (MSE)
-R² Score
+MedInc → Median Income
+HouseAge → House Age
+AveRooms → Average Rooms
+Target
+MedHouseVal → Median House Value
+Model Performance
 
 Example output:
 
@@ -88,32 +62,33 @@ Mean Squared Error (MSE): 0.6589
 R-squared Score (Accuracy Metric): 49.72%
 
 Visualization saved as 'regression_performance.png'
-Visualization
+Output Visualization
 
-The project generates a scatter plot comparing:
+The model generates a graph comparing:
 
 Actual Values
 Predicted Values
 Perfect Prediction Line
 
-This helps visualize the accuracy of predictions.
+Saved as:
 
+regression_performance.png
 Future Improvements
-Use all dataset features for better accuracy
+Use all available dataset features
 Apply feature scaling
-Experiment with advanced regression models:
+Try advanced regression models:
 Random Forest Regressor
+XGBoost
 Decision Tree Regressor
-XGBoost Regressor
 Learning Outcomes
 
-By completing this project, you will learn:
+This project helps understand:
 
-Basics of Machine Learning
+Machine Learning basics
 Regression algorithms
 Data preprocessing
-Model evaluation techniques
-Data visualization in Python
+Model evaluation
+Data visualization
 Author
 
 Pratham Kumar
