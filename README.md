@@ -20,7 +20,7 @@ linear-regression-project/
 How to Run
 1. Clone the Repository
 Bash
-git clone https://github.com/your-username/linear-regression-project.git
+git clone https://github.com/prathamkr0123-collab/predictive-modelling-using-linear-regression
 
 cd linear-regression-project
 2. Install Dependencies
